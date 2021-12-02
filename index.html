@@ -1,0 +1,369 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>OpenHCM - an Open Hull Condition Model</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{mso-style-link:"Titre 1 Car";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:center;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:20.0pt;
+	font-family:"Arial",sans-serif;
+	color:#2E74B5;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+span.Titre1Car
+	{mso-style-name:"Titre 1 Car";
+	mso-style-link:"Titre 1";
+	font-family:"Arial",sans-serif;
+	color:#2E74B5;
+	font-weight:bold;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:36.0pt 36.0pt 36.0pt 36.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72">
+
+<div class=WordSection1>
+
+<h1><span lang=EN-GB style='font-size:48.0pt;line-height:107%'><a href="http://github.com/OpenHCMStandard">OpenHCM</a></span></h1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=EN-GB>Open
+Hull Condition Model</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB
+style='font-size:14.0pt;line-height:107%'>An Open data exchange format for condition
+of ship’s hulls</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=384
+height=52 src="OpenHCM_fichiers/image001.jpg"></p>
+	
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="http://github.com/OpenHCMStandard">Click this link to got to OpenHCM official GitHub web pages</a></p>
+
+	
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>&nbsp;</span></p>
+
+<h1><span lang=EN-GB>OpenHCM: from measurements to analysis</span></h1>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=627
+height=400 id="Image 1" src="OpenHCM_fichiers/image002.png"></p>
+
+<h1><span lang=EN-GB>Purpose of OpenHCM</span></h1>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=708 valign=top style='width:539.5pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoListParagraph style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:justify;text-indent:-18.0pt;line-height:normal'><span lang=EN-GB
+  style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>Enables capturing all information required for
+  determining and analysing the structural status of a vessel.</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-align:justify;text-indent:-18.0pt;line-height:107%'><span
+  lang=EN-GB style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>It includes constructs for geometry
+  information of plates and profiles as well as higher level structures.</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-align:justify;text-indent:-18.0pt;line-height:107%'><span
+  lang=EN-GB style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>Independently can transport data collection
+  from ThicknessMeasurementCampaigns the measurements and their later
+  associations to plates and profiles of a full structural model as needed e.g.
+  for strength analysis. </span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-align:justify;text-indent:-18.0pt;line-height:107%'><span
+  lang=EN-GB style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>OpenHCM also provides support for the use of
+  &quot;incomplete models&quot; as well as for the incremental
+  definition/population of the model data.</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-align:justify;text-indent:-18.0pt;line-height:107%'><span
+  lang=EN-GB style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>Structural modification/replacements due to
+  repairs can be captured thereby support modifications during the life-cycle
+  of a vessel</span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-GB>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<h1><span lang=EN-GB>History</span></h1>
+
+<div align=center>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=708 valign=top style='width:539.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-indent:-18.0pt;line-height:107%'><span lang=EN-GB
+  style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>Started as a result of  CAS project (research
+  project funded under EU Framework 6)</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-indent:-18.0pt;line-height:107%'><span lang=EN-GB
+  style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>Version 0.71 formed the base for an initial
+  public version in 2009</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-indent:-18.0pt;line-height:107%'><span lang=EN-GB
+  style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>OpenHCM consortium founded in 2010</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-indent:-18.0pt;line-height:107%'><span lang=EN-GB
+  style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>Version 1.3.1 was later introduced in 2011</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-indent:-18.0pt;line-height:107%'><span lang=EN-GB
+  style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>Version 2.0 (current) was accepted in Sep.
+  2013</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<h1><span lang=EN-GB>Key features</span></h1>
+
+<div align=center>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=725 colspan=2 valign=top style='width:557.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-indent:-18.0pt;line-height:107%'><span lang=EN-GB
+  style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>Originally modelled along the basic
+  definitions of ISO 10.303-218 (Ship Structures)</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-indent:-18.0pt;line-height:107%'><span lang=EN-GB
+  style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>Described as a XML schema, defining an XML
+  file type.</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;
+  margin-left:36.0pt;text-indent:-18.0pt;line-height:107%'><span lang=EN-GB
+  style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=EN-GB>Implemented in some HCM systems, e.g. from
+  Classification Societies such as BV, DNVGL, …</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=382 valign=top style='width:287.75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><img width=368 height=248
+  src="OpenHCM_fichiers/image003.jpg"></p>
+  </td>
+  <td width=342 valign=top style='width:269.75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><img width=328 height=246
+  id="Inhaltsplatzhalter 6" src="OpenHCM_fichiers/image004.jpg"></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=center style='margin-left:18.0pt;text-align:center'><span
+lang=EN-GB>&nbsp;</span></p>
+
+<h1><span lang=EN-GB>HCM Model 2.0</span></h1>
+
+<p class=MsoNormal align=center style='text-align:center'><img width=1081
+height=568 id="Picture 2" src="OpenHCM_fichiers/image005.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>&nbsp;</span></p>
+
+<h1><span lang=EN-GB>OpenHCM Consortium Members</span></h1>
+
+<div align=center>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=708 valign=top style='width:539.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+  margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+  normal'><span style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=DE>Atlantec-es</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+  margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+  normal'><span style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=DE>Aveva</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+  margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+  normal'><span style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=DE>Bureau Veritas Marine &amp; Offshore</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+  margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+  normal'><span style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=DE>TechnipFMC (Cybernetix)</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+  margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+  normal'><span style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=DE>DNVGL</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+  margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+  normal'><span style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=DE>Lloyds Register</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+  margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+  normal'><span style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=DE>MME</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+  margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+  normal'><span style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=DE>RS (Russian Maritime Register of Shipping)</span></p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+  margin-left:36.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+  normal'><span style='font-family:"Arial",sans-serif'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=DE>Sener (Foran)</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+	
+	
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>&nbsp;</span></p>
+
+<h1><span lang=EN-GB>3D online OpenHCM Viewer</span></h1>
+
+<p class=MsoNormal align=center style='text-align:center'>
+	<span lang=EN-GB>
+		<a href="http://www.openhcm.org/OpenHCMViewer/">
+			A free 3D openHCM viewer
+		</a>
+		is available online.
+	</span>
+</p>
+<p class=MsoNormal align=center style='text-align:center'>
+	<span lang=EN-GB>It is open source code, available
+		<a href="https://github.com/OpenHCMStandard/OpenHCMViewer">
+			here
+		</a>
+		is available online.
+	</span>
+</p>
+	
+	
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>&nbsp;</span></p>
+
+<h1><span lang=EN-GB>Contact</span></h1>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>For
+more information email to the <a
+href="mailto:info@openhcm.org?subject=OpenHCM%20query">OpenHCM consortium
+manager</a></span></p>
+
+
+<p class=MsoNormal align=center style='text-align:center'>
+	<span lang=EN-GB>
+		<a href="http://github.com/OpenHCMStandard">
+			Link to OpenHCM Github pages
+		</a>
+	</span>
+</p>
+
+</div>
+
+</body>
+
+</html>
